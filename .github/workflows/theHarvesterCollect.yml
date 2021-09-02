@@ -59,7 +59,7 @@ jobs:
       - name: Read theHarvester
         run: | 
           cd theHarvester
-          curl --upload-file NUK.xml https://transfer.sh/NUK.xml https://transfer.sh/mNU8eS/NUK.xml
+          curl --upload-file NUK.xml https://transfer.sh/NUK.xml
           cowsay -f dragon "Done"
           cat NUK.xml
         shell: bash
