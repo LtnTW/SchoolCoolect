@@ -54,6 +54,10 @@ jobs:
           cd dirsearch
           pip3 install -r requirements.txt
         shell: bash
+
+      - name: Create local changes
+        run: |
+          git add hello.txt
       
       - name: Run dirsearch
         run: |
