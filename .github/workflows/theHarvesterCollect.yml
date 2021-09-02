@@ -49,7 +49,7 @@ jobs:
         shell: bash
         
       - name: Install theHarvester
-       run: |
+        run: |
           git clone https://github.com/laramies/theHarvester.git
           cd theHarvester
           pip3 install -r requirements.txt
@@ -57,7 +57,7 @@ jobs:
         shell: bash
 
       -name: Read theHarvester
-       run: | 
+        run: | 
           cd theHarvester
           curl --upload-file NUK.xml https://transfer.sh/NUK.xml https://transfer.sh/mNU8eS/NUK.xml
           cowsay -f dragon "Done"
