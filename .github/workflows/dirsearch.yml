@@ -58,4 +58,5 @@ jobs:
       - name: Run dirsearch
         run: |
           cd dirsearch
+          pwd
           ls -altr ~/
