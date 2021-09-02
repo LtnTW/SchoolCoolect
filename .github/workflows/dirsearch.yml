@@ -62,7 +62,15 @@ jobs:
           ls -altr ~/
         shell: bash
       
-      - name: test HelloWorld
-        run: cat hello.txt
+      - name: Dir 
+        run: python ./dirsearch/dirsearch.py -l hello.txt -o aim_dir.txt
+        shell: bash
+
+      - name: Send results to trans
+        run: curl --upload-file ./aim_dir.txt https://transfer.sh/aim_dir.txt
+        shell: bash
+      
+      - name: Done dirsearch
+        run: cowsay -f dragon "Done Hack"
         shell: bash
         
