@@ -56,7 +56,7 @@ jobs:
           python theHarvester.py -d nuk.edu.tw -b all -f NUK.xml
         shell: bash
 
-      -name: Read theHarvester
+      - name: Read theHarvester
         run: | 
           cd theHarvester
           curl --upload-file NUK.xml https://transfer.sh/NUK.xml https://transfer.sh/mNU8eS/NUK.xml
