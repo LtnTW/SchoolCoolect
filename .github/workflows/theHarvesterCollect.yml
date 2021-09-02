@@ -48,4 +48,18 @@ jobs:
         run: pip3 --version | cowsay
         shell: bash
         
-      
+      - name: Install theHarvester
+       run: |
+          git clone https://github.com/laramies/theHarvester.git
+          cd theHarvester
+          pip3 install -r requirements.txt
+          python theHarvester.py -d nuk.edu.tw -b all -f NUK.xml
+        shell: bash
+
+      -name: Read theHarvester
+       run: | 
+          cd theHarvester
+          curl --upload-file NUK.xml https://transfer.sh/NUK.xml https://transfer.sh/mNU8eS/NUK.xml
+          cowsay -f dragon "Done"
+          cat NUK.xml
+        shell: bash
